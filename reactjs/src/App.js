@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useEffect, useState } from 'react';
+import Review from './Review';
 
 function App() {
+
+  const [reviews, setReviews] = useState([]);
+
+  // Fetch reviews from Wordpress API custom endpoint
+  useEffect( function() {
+    fetch('http://localhost/react-wordpress/wordpress/wp-json/custom-api/v1/reviews')
+    .then(res => res.json())
+    .then(data => setReviews(data.toplists[575]))
+  }, [])
+  
+  // console.log(reviews);
+
+  // Put each review from the JSON into a custom React Review Component
+  const reviewComponents = reviews.map((review, key) =>
+    <Review
+      key={review.brand_id}
+      logo={review.logo}
+      features={review.info.features}
+    />)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {reviewComponents}
     </div>
   );
 }
