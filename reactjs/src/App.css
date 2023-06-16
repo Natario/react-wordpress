@@ -5,8 +5,30 @@
 
 .Review {
   display: inline-flex;
+  align-items: center;
   margin: 20px;
   padding: 20px;
   border: 2px solid lightgray;
   border-radius: 5px;
+}
+
+.Review > * {
+  margin: 20px;
+}
+
+.Review-features > * {
+  text-align: left;
+}
+
+.Review-playnow {
+  margin: 20px;
+  padding: 20px;
+  background-color: green;
+  border: 2px none;
+  border-radius: 5px;
+}
+
+.Review-playnow a {
+  text-decoration: none;
+  color: white;
 }
