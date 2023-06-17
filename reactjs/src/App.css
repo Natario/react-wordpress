@@ -5,6 +5,7 @@
 
 .Review {
   display: inline-flex;
+  flex-wrap: wrap;
   align-items: center;
   margin: 20px;
   border: 2px solid lightgray;
@@ -12,7 +13,8 @@
 }
 
 .Review > * {
-  margin: 20px 50px;
+  margin: 10px 30px;
+  width: 220px;
 }
 
 

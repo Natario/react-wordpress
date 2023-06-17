@@ -20,10 +20,15 @@ function Review(props) {
 
   return (
     <div className="Review">
-      {props.position}
-      <img src={props.logo} className="Review-logo" alt="" />
-      <p>{stars}</p>
+      {/* {props.position} */}
+      <div className='Review-logo'>
+        <img src={props.logo} alt="" />
+      </div>
+      <div className='Review-rating'>
+        <p>{stars}</p>
+      </div>
       <div className='Review-features'>
+        {/* Print each feature with a checkmark next to it */}
         <p><FontAwesomeIcon icon={faCircleCheckSolid} style={{ color: 'green' }}/> {props.features[0]}</p>
         <p><FontAwesomeIcon icon={faCircleCheckSolid} style={{ color: 'green' }}/> {props.features[1]}</p>
         <p><FontAwesomeIcon icon={faCircleCheckSolid} style={{ color: 'green' }}/> {props.features[2]}</p>
