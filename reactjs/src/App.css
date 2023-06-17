@@ -49,9 +49,6 @@
   background-color: green;
   border: 2px none;
   border-radius: 5px;
-}
-
-.loadmore-buttontext {
-  text-decoration: none;
+  cursor: pointer;
   color: white;
 }

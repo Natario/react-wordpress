@@ -1,4 +1,4 @@
-import './App.css';
+import './App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-regular-svg-icons'
 import { faStar as faStarSolid} from '@fortawesome/free-solid-svg-icons'
@@ -6,20 +6,21 @@ import { faCircleCheck as faCircleCheckSolid} from '@fortawesome/free-solid-svg-
 
 function Review(props) {
 
-  const stars = [];
+  const stars = []
 
   // print one full star for each rating point
   for (let index = 1; index <= props.rating; index++) {
-    stars.push(<FontAwesomeIcon icon={faStarSolid} style={{ color: 'orange' }}/>);
+    stars.push(<FontAwesomeIcon icon={faStarSolid} style={{ color: 'orange' }} key={index}/>)
   }
   
   // then print one empty star until there are a total of 5 stars
   for (let index = props.rating+1; index <= 5; index++) {
-    stars.push(<FontAwesomeIcon icon={faStar} style={{ color: 'orange' }}/>);
+    stars.push(<FontAwesomeIcon icon={faStar} style={{ color: 'orange' }} key={index}/>)
   }
 
   return (
     <div className="Review">
+      {props.position}
       <img src={props.logo} className="Review-logo" alt="" />
       <p>{stars}</p>
       <div className='Review-features'>
@@ -36,7 +37,7 @@ function Review(props) {
         <div dangerouslySetInnerHTML={{__html: props.terms_and_conditions}}/> {/* JSON data is provided by us, not random users, so it's safe to set HTML directly */}
       </div>
     </div>
-  );
+  )
 }
 
-export default Review;
+export default Review
