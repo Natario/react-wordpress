@@ -28,9 +28,11 @@ function Review(props) {
         <p><FontAwesomeIcon icon={faCircleCheckSolid} style={{ color: 'green' }}/> {props.features[2]}</p>
       </div>
       <div className='Review-links'>
-        <div className='Review-playnow'>
-          <a href={props.play_url}>Play Now</a>
-        </div>
+        <a href={props.play_url} className='playnow-buttontext'>
+          <div className='playnow-button'>
+            Play Now
+          </div>
+        </a>
         <div dangerouslySetInnerHTML={{__html: props.terms_and_conditions}}/> {/* JSON data is provided by us, not random users, so it's safe to set HTML directly */}
       </div>
     </div>

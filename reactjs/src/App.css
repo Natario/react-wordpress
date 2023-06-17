@@ -7,28 +7,51 @@
   display: inline-flex;
   align-items: center;
   margin: 20px;
-  padding: 20px;
   border: 2px solid lightgray;
   border-radius: 5px;
 }
 
 .Review > * {
-  margin: 20px;
+  margin: 20px 50px;
 }
+
 
 .Review-features > * {
   text-align: left;
 }
 
-.Review-playnow {
-  margin: 20px;
+
+.playnow-button {
+  margin: 20px 0px;
+  padding: 20px;
+  background-color: green;
+  border: 2px none;
+  border-radius: 5px;
+  width: 150px;
+}
+
+.playnow-buttontext {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  display: inline-flex;
+}
+
+
+.loadmore-div {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.loadmore-button {
+  margin: 20px 0px;
   padding: 20px;
   background-color: green;
   border: 2px none;
   border-radius: 5px;
 }
 
-.Review-playnow a {
+.loadmore-buttontext {
   text-decoration: none;
   color: white;
 }

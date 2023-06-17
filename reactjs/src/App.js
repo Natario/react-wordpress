@@ -34,6 +34,13 @@ function App() {
   return (
     <div className="App">
       {reviewComponents}
+      <div className='loadmore-div'>
+        <a href='blank' className='loadmore-buttontext'>
+          <div className='loadmore-button'>
+            Load More
+          </div>
+        </a>
+      </div>
     </div>
   );
 }
