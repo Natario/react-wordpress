@@ -1,0 +1,3 @@
+# These files are dependent on the server and are created by Wordpress when it is installed on a new server
+/wp-config.php
+/.htaccess
