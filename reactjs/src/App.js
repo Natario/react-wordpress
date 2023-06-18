@@ -11,7 +11,7 @@ function App() {
    
   useEffect( function() {
     // Fetch reviews from Wordpress API custom endpoint
-    fetch('http://localhost/react-wordpress/wordpress/wp-json/custom-api/v1/reviews')
+    fetch('https://wordpress-backend.000webhostapp.com/wp-json/custom-api/v1/reviews')
     .then(res => res.json())
     .then(data => {
       
