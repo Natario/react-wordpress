@@ -11,7 +11,7 @@ function App() {
    
   useEffect( function() {
     // Fetch reviews from Wordpress API custom endpoint
-    fetch('https://wordpress-backend.000webhostapp.com/wp-json/custom-api/v1/reviews')
+    fetch('https://pedronatario.com/react-wordpress/wordpress/wp-json/custom-api/v1/reviews')
     .then(res => res.json())
     .then(data => {
       
@@ -29,6 +29,10 @@ function App() {
           terms_and_conditions={review.terms_and_conditions}
           play_url={review.play_url}
         />))
+
+      // then hide the loading text and show the Load More button
+      document.getElementsByClassName("loadingtext")[0].style.display = "none";
+      document.getElementsByClassName("loadmore-div")[0].style.display = "block";
 
       // then advance the counter so we know where to cut the review array on the next "load more" click
       setLoadedReviewsCount(3)
@@ -63,8 +67,9 @@ function App() {
 
   return (
     <div className="App">
+      <p className='loadingtext'>Loading reviews...</p>
       {reviewComponents}
-      <div className='loadmore-div'>
+      <div className='loadmore-div' style={{ display:'none' }}>
         <div className='loadmore-button' onClick={loadMore}>
           Load More
         </div>
