@@ -1,2 +1,2 @@
 # react-wordpress
-Interview task on using React and Wordpress REST API
+React front-end communicating with Wordpress backk-end via Wordpress' REST API
